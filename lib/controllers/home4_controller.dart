@@ -6,6 +6,12 @@ class Home4Controller extends GetxController {
   var isLoading = false.obs;
   var items = [].obs;
 
+  @override
+  void onInit() {
+    super.onInit();
+    apiPostList();
+  }
+
   void apiPostList() async {
     isLoading.value = true;
     var response = await Network.GET(Network.API_LIST, Network.paramsEmpty());

@@ -3,21 +3,11 @@ import 'package:get/get.dart';
 import 'package:patterns_getx/controllers/home1_controller.dart';
 import 'package:patterns_getx/views/item_home1_post.dart';
 
-class Home1Page extends StatefulWidget {
-  const Home1Page({Key? key}) : super(key: key);
+class Home1Page extends StatelessWidget {
+  static const String id = "/home1_page";
+  Home1Page({Key? key}) : super(key: key);
 
-  @override
-  State<Home1Page> createState() => _Home1PageState();
-}
-
-class _Home1PageState extends State<Home1Page> {
   final _controller = Get.put(Home1Controller());
-
-  @override
-  void initState() {
-    super.initState();
-    _controller.apiPostList();
-  }
 
   @override
   Widget build(BuildContext context) {

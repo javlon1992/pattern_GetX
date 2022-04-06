@@ -4,22 +4,9 @@ import 'package:get/get.dart';
 import 'package:patterns_getx/controllers/home2_controller.dart';
 import 'package:patterns_getx/views/item_home2_post.dart';
 
-class Home2Page extends StatefulWidget {
-  static const String id = "/main_page";
+class Home2Page extends StatelessWidget {
+  static const String id = "/home2_page";
   const Home2Page({Key? key}) : super(key: key);
-
-  @override
-  State<Home2Page> createState() => _Home2PageState();
-}
-
-class _Home2PageState extends State<Home2Page> {
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    Get.find<Home2Controller>().apiPostList();
-  }
 
   @override
   Widget build(BuildContext context) {

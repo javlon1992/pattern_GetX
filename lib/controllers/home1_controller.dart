@@ -7,6 +7,13 @@ class Home1Controller extends GetxController {
   var isLoading = false.obs;
   var items = [].obs;
 
+  @override
+  void onInit() {
+    super.onInit();
+    apiPostList();
+  }
+
+
   void apiPostList() async {
     isLoading.value = true;
 
