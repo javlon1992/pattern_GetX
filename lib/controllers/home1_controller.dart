@@ -9,6 +9,7 @@ class Home1Controller extends GetxController {
   @override
   void onInit() {
     super.onInit();
+
     apiPostList();
   }
 
