@@ -101,12 +101,21 @@ packages:
     source: hosted
     version: "4.6.1"
   http:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: http
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.4"
+  http_package:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "929be6d51647843bd5dad487a07f07cd1a2db2e2"
+      url: "https://github.com/javlon1992/http_package.git"
+    source: git
+    version: "0.0.1"
   http_parser:
     dependency: transitive
     description:
@@ -218,5 +227,5 @@ packages:
     source: hosted
     version: "2.1.1"
 sdks:
-  dart: ">=2.16.0 <3.0.0"
+  dart: ">=2.16.2 <3.0.0"
   flutter: ">=1.22.0"

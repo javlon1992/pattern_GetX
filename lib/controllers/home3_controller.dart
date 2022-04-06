@@ -1,6 +1,5 @@
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-import 'package:patterns_getx/model/post_model.dart';
-import 'package:patterns_getx/services/http_service.dart';
+import 'package:http_package/http_package.dart';
 
 class Home3Controller extends GetxController {
   var isLoading = false;

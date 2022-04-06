@@ -13,7 +13,7 @@ class Home3Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Pattern - GetX"),
+          title: const Text("Pattern - GetX"),
         ),
         body: GetBuilder<Home3Controller>(
           init: Home3Controller(),

@@ -17,9 +17,13 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   get: ^4.6.1
-  http: ^0.13.4
   flutter_slidable: ^1.2.0
   fluttertoast: ^8.0.8
+
+  # import in github
+  http_package:
+    git:
+      url: https://github.com/javlon1992/http_package.git
 
 dev_dependencies:
   flutter_test:

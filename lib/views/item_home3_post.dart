@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:patterns_getx/controllers/home3_controller.dart';
-import 'package:patterns_getx/model/post_model.dart';
+import 'package:http_package/http_package.dart';
 
 Widget itemHome3Post(Home3Controller controller, Post post) {
   return Slidable(

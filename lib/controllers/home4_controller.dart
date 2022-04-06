@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-import 'package:patterns_getx/model/post_model.dart';
-import 'package:patterns_getx/services/http_service.dart';
+import 'package:http_package/http_package.dart';
 
 class Home4Controller extends GetxController {
   var isLoading = false.obs;

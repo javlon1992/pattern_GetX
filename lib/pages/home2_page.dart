@@ -14,8 +14,7 @@ class Home2Page extends StatelessWidget {
         appBar: AppBar(
           title: Text("Pattern - GetX"),
         ),
-        body: Obx(
-              () => Stack(
+        body: Obx(() => Stack(
             children: [
               ListView.builder(
                 itemCount: Get.find<Home2Controller>().items.length,
