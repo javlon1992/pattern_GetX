@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patterns_getx/pages/home_page.dart';
-import 'package:patterns_getx/pages/main_page.dart';
+import 'package:patterns_getx/pages/home1_page.dart';
+import 'package:patterns_getx/pages/home2_page.dart';
 import 'package:patterns_getx/services/bind_service.dart';
 import 'package:patterns_getx/services/di_service.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Pattern GetX',
-      home: MainPage(),
+      home: Home2Page(),
       //initialBinding: ControllersBinding(),
       // getPages: [
       //   GetPage(

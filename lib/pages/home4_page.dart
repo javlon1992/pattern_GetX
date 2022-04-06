@@ -1,23 +1,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patterns_getx/controllers/payment_controller.dart';
-import 'package:patterns_getx/views/item_payment_post.dart';
+import 'package:patterns_getx/controllers/home4_controller.dart';
+import 'package:patterns_getx/views/item_home4_post.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({Key? key}) : super(key: key);
+class Home4Page extends StatefulWidget {
+  const Home4Page({Key? key}) : super(key: key);
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<Home4Page> createState() => _Home4PageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _Home4PageState extends State<Home4Page> {
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Get.find<PaymentController>().apiPostList();
+    Get.find<Home4Controller>().apiPostList();
   }
 
   @override
@@ -26,19 +26,22 @@ class _PaymentPageState extends State<PaymentPage> {
         appBar: AppBar(
           title: Text("Pattern - GetX"),
         ),
-        body: GetBuilder<PaymentController>(
-          init: PaymentController(),
-          builder: (_controller) {
+        body: GetX<Home4Controller>(
+          init: Home4Controller(),
+          builder: (_controller){
             return Stack(
               children: [
                 ListView.builder(
                   itemCount: _controller.items.length,
                   itemBuilder: (ctx, index) {
-                    return itemPaymentPost(
-                        _controller, _controller.items[index]);
+                    return itemHome4Post(_controller, _controller.items[index]);
                   },
                 ),
-                _controller.isLoading ? const Center(child: CircularProgressIndicator(),) : const SizedBox.shrink(),
+                _controller.isLoading.value
+                    ? Center(
+                  child: CircularProgressIndicator(),
+                )
+                    : SizedBox.shrink(),
               ],
             );
           },
@@ -52,4 +55,5 @@ class _PaymentPageState extends State<PaymentPage> {
           child: Icon(Icons.add),
         ));
   }
+
 }

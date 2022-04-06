@@ -1,23 +1,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patterns_getx/controllers/setting_controller.dart';
-import 'package:patterns_getx/views/item_setting_post.dart';
+import 'package:patterns_getx/controllers/home3_controller.dart';
+import 'package:patterns_getx/views/item_home3_post.dart';
 
-class SettingPage extends StatefulWidget {
-  const SettingPage({Key? key}) : super(key: key);
+class Home3Page extends StatefulWidget {
+  const Home3Page({Key? key}) : super(key: key);
 
   @override
-  State<SettingPage> createState() => _SettingPageState();
+  State<Home3Page> createState() => _Home3PageState();
 }
 
-class _SettingPageState extends State<SettingPage> {
+class _Home3PageState extends State<Home3Page> {
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Get.find<SettingController>().apiPostList();
+    Get.find<Home3Controller>().apiPostList();
   }
 
   @override
@@ -26,22 +26,19 @@ class _SettingPageState extends State<SettingPage> {
         appBar: AppBar(
           title: Text("Pattern - GetX"),
         ),
-        body: GetX<SettingController>(
-          init: SettingController(),
-          builder: (_controller){
+        body: GetBuilder<Home3Controller>(
+          init: Home3Controller(),
+          builder: (_controller) {
             return Stack(
               children: [
                 ListView.builder(
                   itemCount: _controller.items.length,
                   itemBuilder: (ctx, index) {
-                    return itemSettingPost(_controller, _controller.items[index]);
+                    return itemHome3Post(
+                        _controller, _controller.items[index]);
                   },
                 ),
-                _controller.isLoading.value
-                    ? Center(
-                  child: CircularProgressIndicator(),
-                )
-                    : SizedBox.shrink(),
+                _controller.isLoading ? const Center(child: CircularProgressIndicator(),) : const SizedBox.shrink(),
               ],
             );
           },
@@ -55,5 +52,4 @@ class _SettingPageState extends State<SettingPage> {
           child: Icon(Icons.add),
         ));
   }
-
 }

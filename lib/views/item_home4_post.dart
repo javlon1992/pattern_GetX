@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:patterns_getx/controllers/setting_controller.dart';
+import 'package:patterns_getx/controllers/home4_controller.dart';
 import 'package:patterns_getx/model/post_model.dart';
 
-Widget itemSettingPost(SettingController controller, Post post) {
+Widget itemHome4Post(Home4Controller controller, Post post) {
   return Slidable(
     startActionPane: ActionPane(
       motion: const ScrollMotion(),

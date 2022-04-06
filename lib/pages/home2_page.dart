@@ -1,24 +1,24 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:patterns_getx/controllers/main_controller.dart';
-import 'package:patterns_getx/views/item_main_post.dart';
+import 'package:patterns_getx/controllers/home2_controller.dart';
+import 'package:patterns_getx/views/item_home2_post.dart';
 
-class MainPage extends StatefulWidget {
+class Home2Page extends StatefulWidget {
   static const String id = "/main_page";
-  const MainPage({Key? key}) : super(key: key);
+  const Home2Page({Key? key}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<Home2Page> createState() => _Home2PageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _Home2PageState extends State<Home2Page> {
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Get.find<MainController>().apiPostList();
+    Get.find<Home2Controller>().apiPostList();
   }
 
   @override
@@ -31,12 +31,12 @@ class _MainPageState extends State<MainPage> {
               () => Stack(
             children: [
               ListView.builder(
-                itemCount: Get.find<MainController>().items.length,
+                itemCount: Get.find<Home2Controller>().items.length,
                 itemBuilder: (ctx, index) {
-                  return itemMainPost(Get.find<MainController>(), Get.find<MainController>().items[index]);
+                  return itemHome2Post(Get.find<Home2Controller>(), Get.find<Home2Controller>().items[index]);
                 },
               ),
-              Get.find<MainController>().isLoading.value ? const Center(child: CircularProgressIndicator(),) : const SizedBox.shrink(),
+              Get.find<Home2Controller>().isLoading.value ? const Center(child: CircularProgressIndicator(),) : const SizedBox.shrink(),
             ],
           ),
         ),
